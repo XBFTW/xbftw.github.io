@@ -1,2 +1,2 @@
 # XBFTW
-This website moves people from xbftw.github.io to github.xbftw.com
+This website manages https://github.xbftw.com, a simple site that redirects users to my GitHub page.
