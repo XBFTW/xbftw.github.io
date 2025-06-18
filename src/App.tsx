@@ -36,6 +36,98 @@ const tabs = [
             accessible for everyone.
           </p>
         </div>
+        {/* Passions Section - insert here, before resume */}
+        <div className="passion-box">
+          <h4 className="passion-title">What I'm Passionate About</h4>
+          <p className="passion-desc">
+            Outside of school, work, and coding I love playing video games,
+            exploring nature, and spending time with friends. I also enjoy
+            listening to music, everything from Jazz to Hip-Hop, and playing the
+            clarinet.
+          </p>
+        </div>
+        {/* Resume Box follows */}
+        <div className="resume-box">
+          <div className="resume-header">
+            <span className="resume-title">Résumé</span>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-download"
+            >
+              Download PDF
+            </a>
+          </div>
+          <div className="resume-content">
+            <div className="resume-section">
+              <h4>Education</h4>
+              <ul>
+                <li>
+                  <strong>Simon Fraser University</strong>
+                  <br />
+                  BSc. in Computer Science
+                  <br />
+                  2023 – Present
+                </li>
+              </ul>
+            </div>
+            <div className="resume-section">
+              <h4>Experience</h4>
+              <ul>
+                <li>
+                  <strong>Staples Canada</strong>
+                  <br />
+                  Technology Sales
+                  <br />
+                  Dec 2022 – Present
+                </li>
+              </ul>
+            </div>
+            <div className="resume-section">
+              <h4>Certifications &amp; Awards</h4>
+              <ul>
+                <li>
+                  <strong>Diplôme d’Études en Langue Française (DELF)</strong>
+                  <br />
+                  Awarded by the French Ministry of Education
+                  <br />
+                  2023
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Entire Skills Tab moved here */}
+          <div className="skills-list resume-skills-below">
+            <div className="skill-group">
+              <h4 className="skill-title">Languages</h4>
+              <ul>
+                <li>JavaScript / TypeScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C / C++</li>
+              </ul>
+            </div>
+            <div className="skill-group">
+              <h4 className="skill-title">Frameworks & Libraries</h4>
+              <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>discord.js</li>
+              </ul>
+            </div>
+            <div className="skill-group">
+              <h4 className="skill-title">Tools & Other</h4>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>Linux</li>
+                <li>VS Code</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     ),
   },
@@ -81,43 +173,6 @@ const tabs = [
     ),
   },
   {
-    label: "Skills",
-    content: (
-      <section className="tab-section">
-        <h2 className="tab-title">Skills</h2>
-        <div className="skills-list">
-          <div className="skill-group">
-            <h4 className="skill-title">Languages</h4>
-            <ul>
-              <li>JavaScript / TypeScript</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>C / C++</li>
-            </ul>
-          </div>
-          <div className="skill-group">
-            <h4 className="skill-title">Frameworks & Libraries</h4>
-            <ul>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>discord.js</li>
-            </ul>
-          </div>
-          <div className="skill-group">
-            <h4 className="skill-title">Tools & Other</h4>
-            <ul>
-              <li>Git & GitHub</li>
-              <li>Linux</li>
-              <li>VS Code</li>
-              <li>Figma</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    ),
-  },
-  {
     label: "Contact",
     content: (
       <section className="tab-section">
@@ -150,11 +205,7 @@ const tabs = [
               <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" />
             </svg>
           </a>
-          <a
-            href={contactLinks.email}
-            className="icon-link"
-            aria-label="Email"
-          >
+          <a href={contactLinks.email} className="icon-link" aria-label="Email">
             {/* Email SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z" />
