@@ -3,11 +3,20 @@ import './App.css'
 
 const tabs = [
   { label: 'About', content: (
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Hi! I'm Uttam Sharma, a passionate software developer and student. I enjoy building web applications, exploring new technologies, and solving real-world problems with code.
-        </p>
+      <section className="about-section">
+        <div className="about-photo-container">
+          <img
+            src="/headshot.jpg"
+            alt="Uttam Sharma headshot"
+            className="about-photo"
+          />
+        </div>
+        <div className="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi! I'm Uttam Sharma, a passionate software developer and student. I enjoy building web applications, exploring new technologies, and solving real-world problems with code.
+          </p>
+        </div>
       </section>
     )
   },
@@ -45,10 +54,7 @@ const tabs = [
       <section>
         <h2>Contact</h2>
         <p>
-          Email: <a href="mailto:uttam@example.com">uttam@example.com</a>
-        </p>
-        <p>
-          GitHub: <a href="https://github.com/xbftw" target="_blank" rel="noopener noreferrer">xbftw</a>
+          Email: <a href="mailto:contact@uttamsharma.com">contact@uttamsharma.com</a>
         </p>
       </section>
     )
@@ -71,7 +77,6 @@ function App() {
         <>
           <div className="topbar">
             <div className="site-title-gradient">
-              <span className="site-title-icon">🟣</span>
               <span className="site-title-text">Uttam Sharma</span>
             </div>
             <nav style={{ marginLeft: 'auto' }}>
@@ -89,7 +94,7 @@ function App() {
               </ul>
             </nav>
           </div>
-          <main className="main-content" style={{ flex: 1 }}>
+          <main className="main-content">
             {tabs[activeTab].content}
           </main>
           <footer style={{ marginTop: 'auto', marginBottom: '2.5rem', textAlign: 'center', color: '#888' }}>

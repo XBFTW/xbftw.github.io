@@ -52,12 +52,18 @@
   letter-spacing: 2px;
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #646cff 30%, #a95ce7 70%);
+  background: linear-gradient(90deg, #646cff 30%, #b16cea 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: fadeInLeft 1s;
   user-select: none;
+}
+
+.site-title-text {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 nav {
@@ -160,7 +166,6 @@ section p, section ul, section li {
 
 footer {
   margin-top: 3rem;
-  margin-bottom: 2.5rem;
   text-align: center;
   color: #888;
   animation: fadeIn 1.2s;
@@ -205,7 +210,7 @@ footer {
 .landing-page {
   min-height: 100vh;
   width: 100vw;
-  background: linear-gradient(120deg, #181a20 60%, #646cff 100%);
+  background: linear-gradient(135deg, #181a20 60%, #646cff 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,4 +253,59 @@ footer {
   margin-top: 2rem;
   opacity: 0.7;
   animation: fadeIn 2s;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-photo-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #646cff;
+  box-shadow: 0 4px 24px #646cff33;
+  background: #fff;
+}
+
+.about-text {
+  flex: 1 1 250px;
+  min-width: 220px;
+  text-align: left;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-link {
+  color: #646cff;
+  transition: transform 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.icon-link:hover {
+  color: #b16cea;
+  transform: scale(1.18) rotate(-8deg);
+  box-shadow: 0 4px 16px #b16cea33;
+  background: #23243a;
 }
