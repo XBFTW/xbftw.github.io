@@ -16,9 +16,15 @@ const tabs = [
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            Hi! I'm Uttam Sharma, a passionate software developer and student. I
-            enjoy building web applications, exploring new technologies, and
-            solving real-world problems with code.
+            Hi! I’m Uttam Sharma, a Computer Science student at Simon Fraser
+            University with a strong passion for all things tech. I’m especially
+            interested in software development and cybersecurity, and I’m always
+            eager to learn more about how technology shapes the world around us.
+            Whether it’s exploring new tools, diving into open-source code, or
+            staying up-to-date with the latest in the tech world, I love being
+            part of a field that’s constantly evolving. My goal is to build a
+            career where I can create meaningful software and contribute to
+            making technology more secure and accessible for everyone.
           </p>
         </div>
       </section>
