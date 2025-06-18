@@ -91,14 +91,35 @@ const tabs = [
 							</ul>
 						</div>
 					</div>
-					{/* Skills section moved below resume-content */}
-					<div className="resume-skills-below">
-						<h4>Skills</h4>
-						<ul>
-							<li>JavaScript, TypeScript, Python, Java</li>
-							<li>React, Node.js, Express, discord.js</li>
-							<li>Git, Linux, Cybersecurity</li>
-						</ul>
+					{/* Entire Skills Tab moved here */}
+					<div className="skills-list resume-skills-below">
+						<div className="skill-group">
+							<h4 className="skill-title">Languages</h4>
+							<ul>
+								<li>JavaScript / TypeScript</li>
+								<li>Python</li>
+								<li>Java</li>
+								<li>C / C++</li>
+							</ul>
+						</div>
+						<div className="skill-group">
+							<h4 className="skill-title">Frameworks & Libraries</h4>
+							<ul>
+								<li>React</li>
+								<li>Node.js</li>
+								<li>Express</li>
+								<li>discord.js</li>
+							</ul>
+						</div>
+						<div className="skill-group">
+							<h4 className="skill-title">Tools & Other</h4>
+							<ul>
+								<li>Git & GitHub</li>
+								<li>Linux</li>
+								<li>VS Code</li>
+								<li>Figma</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -140,43 +161,6 @@ const tabs = [
 						>
 							View Source
 						</a>
-					</div>
-				</div>
-			</section>
-		),
-	},
-	{
-		label: "Skills",
-		content: (
-			<section className="tab-section">
-				<h2 className="tab-title">Skills</h2>
-				<div className="skills-list">
-					<div className="skill-group">
-						<h4 className="skill-title">Languages</h4>
-						<ul>
-							<li>JavaScript / TypeScript</li>
-							<li>Python</li>
-							<li>Java</li>
-							<li>C / C++</li>
-						</ul>
-					</div>
-					<div className="skill-group">
-						<h4 className="skill-title">Frameworks & Libraries</h4>
-						<ul>
-							<li>React</li>
-							<li>Node.js</li>
-							<li>Express</li>
-							<li>discord.js</li>
-						</ul>
-					</div>
-					<div className="skill-group">
-						<h4 className="skill-title">Tools & Other</h4>
-						<ul>
-							<li>Git & GitHub</li>
-							<li>Linux</li>
-							<li>VS Code</li>
-							<li>Figma</li>
-						</ul>
 					</div>
 				</div>
 			</section>
