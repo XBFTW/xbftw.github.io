@@ -35,20 +35,37 @@ const tabs = [
     content: (
       <section>
         <h2>Projects</h2>
-        <ul>
-          <li>
-            <strong>Personal Website</strong> – This site! Built with React and
-            Vite.
-          </li>
-          <li>
-            <strong>Project 2</strong> – Description of another project or
-            coursework.
-          </li>
-          <li>
-            <strong>Project 3</strong> – Description of another project or
-            achievement.
-          </li>
-        </ul>
+        <div className="projects-list">
+          <div className="project-card">
+            <h3>Personal Website</h3>
+            <p>
+              This website! Built with React and Vite, styled with custom CSS,
+              and fully responsive. It serves as my portfolio and contact hub.
+            </p>
+            <a
+              href="https://github.com/xbftw/xbftw.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source
+            </a>
+          </div>
+          <div className="project-card">
+            <h3>XBFTW-BOT</h3>
+            <p>
+              A feature-rich Discord bot for moderation, fun, and utility
+              commands. Built with Node.js and discord.js, used by multiple
+              communities.
+            </p>
+            <a
+              href="https://github.com/xbftw/XBFTW-BOT"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source
+            </a>
+          </div>
+        </div>
       </section>
     ),
   },
