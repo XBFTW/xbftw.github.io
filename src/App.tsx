@@ -36,7 +36,17 @@ const tabs = [
             accessible for everyone.
           </p>
         </div>
-        {/* Resume Box */}
+        {/* Passions Section - insert here, before resume */}
+        <div className="passion-box">
+          <h4 className="passion-title">What I'm Passionate About</h4>
+          <p className="passion-desc">
+            Outside of school, work, and coding I love playing video games,
+            exploring nature, and spending time with friends. I also enjoy
+            listening to music, everything from Jazz to Hip-Hop, and playing the
+            clarinet.
+          </p>
+        </div>
+        {/* Resume Box follows */}
         <div className="resume-box">
           <div className="resume-header">
             <span className="resume-title">Résumé</span>
