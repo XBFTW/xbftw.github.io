@@ -13,9 +13,11 @@ Welcome to my personal website! This site showcases my projects, skills, and int
 To view the website locally:
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/xbftw/xbftw.github.io.git
-  ```
+
+```bash
+git clone https://github.com/xbftw/xbftw.github.io.git
+```
+
 2. Open `index.html` in your browser.
 
 ## Technologies Used

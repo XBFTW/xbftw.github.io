@@ -1,8 +1,10 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 const tabs = [
-  { label: 'About', content: (
+  {
+    label: "About",
+    content: (
       <section className="about-section">
         <div className="about-photo-container">
           <img
@@ -14,30 +16,39 @@ const tabs = [
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            Hi! I'm Uttam Sharma, a passionate software developer and student. I enjoy building web applications, exploring new technologies, and solving real-world problems with code.
+            Hi! I'm Uttam Sharma, a passionate software developer and student. I
+            enjoy building web applications, exploring new technologies, and
+            solving real-world problems with code.
           </p>
         </div>
       </section>
-    )
+    ),
   },
-  { label: 'Projects', content: (
+  {
+    label: "Projects",
+    content: (
       <section>
         <h2>Projects</h2>
         <ul>
           <li>
-            <strong>Personal Website</strong> – This site! Built with React and Vite.
+            <strong>Personal Website</strong> – This site! Built with React and
+            Vite.
           </li>
           <li>
-            <strong>Project 2</strong> – Description of another project or coursework.
+            <strong>Project 2</strong> – Description of another project or
+            coursework.
           </li>
           <li>
-            <strong>Project 3</strong> – Description of another project or achievement.
+            <strong>Project 3</strong> – Description of another project or
+            achievement.
           </li>
         </ul>
       </section>
-    )
+    ),
   },
-  { label: 'Skills', content: (
+  {
+    label: "Skills",
+    content: (
       <section>
         <h2>Skills</h2>
         <ul>
@@ -48,17 +59,20 @@ const tabs = [
           <li>Git &amp; GitHub</li>
         </ul>
       </section>
-    )
+    ),
   },
-  { label: 'Contact', content: (
+  {
+    label: "Contact",
+    content: (
       <section>
         <h2>Contact</h2>
         <p>
-          Email: <a href="mailto:contact@uttamsharma.com">contact@uttamsharma.com</a>
+          Email:{" "}
+          <a href="mailto:contact@uttamsharma.com">contact@uttamsharma.com</a>
         </p>
       </section>
-    )
-  }
+    ),
+  },
 ];
 
 function App() {
@@ -66,7 +80,9 @@ function App() {
   const [showLanding, setShowLanding] = useState(true);
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div
+      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+    >
       {showLanding ? (
         <div className="landing-page" onClick={() => setShowLanding(false)}>
           <span className="landing-hi">hi my name is</span>
@@ -79,12 +95,12 @@ function App() {
             <div className="site-title-gradient">
               <span className="site-title-text">Uttam Sharma</span>
             </div>
-            <nav style={{ marginLeft: 'auto' }}>
+            <nav style={{ marginLeft: "auto" }}>
               <ul className="topbar-nav">
                 {tabs.map((tab, idx) => (
                   <li key={tab.label}>
                     <button
-                      className={activeTab === idx ? 'active' : ''}
+                      className={activeTab === idx ? "active" : ""}
                       onClick={() => setActiveTab(idx)}
                     >
                       {tab.label}
@@ -94,10 +110,15 @@ function App() {
               </ul>
             </nav>
           </div>
-          <main className="main-content">
-            {tabs[activeTab].content}
-          </main>
-          <footer style={{ marginTop: 'auto', marginBottom: '2.5rem', textAlign: 'center', color: '#888' }}>
+          <main className="main-content">{tabs[activeTab].content}</main>
+          <footer
+            style={{
+              marginTop: "auto",
+              marginBottom: "2.5rem",
+              textAlign: "center",
+              color: "#888",
+            }}
+          >
             &copy; {new Date().getFullYear()} Uttam Sharma. All rights reserved.
           </footer>
         </>
@@ -106,4 +127,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
