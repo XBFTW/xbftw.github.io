@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import contactLinks from "./contactLinks";
 
 const tabs = [
   {
@@ -126,7 +127,7 @@ const tabs = [
         </p>
         <div className="contact-icons contact-icons-centered">
           <a
-            href="https://github.com/xbftw"
+            href={contactLinks.github}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
@@ -138,7 +139,7 @@ const tabs = [
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/uttam-sharma"
+            href={contactLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
@@ -150,7 +151,7 @@ const tabs = [
             </svg>
           </a>
           <a
-            href="mailto:uttam@example.com"
+            href={contactLinks.email}
             className="icon-link"
             aria-label="Email"
           >
@@ -160,7 +161,7 @@ const tabs = [
             </svg>
           </a>
           <a
-            href="https://discord.com/users/your-discord-id"
+            href={contactLinks.discord}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
@@ -172,7 +173,7 @@ const tabs = [
             </svg>
           </a>
           <a
-            href="https://instagram.com/your-instagram"
+            href={contactLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
