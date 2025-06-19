@@ -97,7 +97,6 @@ const tabs = [
               </ul>
             </div>
           </div>
-          {/* Entire Skills Tab moved here */}
           <div className="skills-list resume-skills-below">
             <div className="skill-group">
               <h4 className="skill-title">Languages</h4>
@@ -128,6 +127,7 @@ const tabs = [
             </div>
           </div>
         </div>
+        <PhotoGallery />
       </section>
     ),
   },
@@ -241,6 +241,86 @@ const tabs = [
   },
 ];
 
+const galleryPhotos = [
+  {
+    src: "/gallery/porteauCove.jpg",
+    alt: "Uttam at Porteau Cove Provincial Park",
+    caption: "Uttam at Porteau Cove Provincial Park",
+  },
+  {
+    src: "/gallery/sfuco.jpg",
+    alt: "Uttam standing with SFU Concert Orchestra team",
+    caption: "Uttam playing with SFU Concert Orchestra",
+  },
+  {
+    src: "/gallery/shannonFalls.jpg",
+    alt: "Shannon Falls Provincial Park waterfall",
+    caption: "Shannon Falls Provincial Park waterfall",
+  },
+  {
+    src: "/gallery/cascadeFalls.jpg",
+    alt: "Cascade Falls Waterfall",
+    caption: "Cascade Falls Waterfall",
+  },
+  {
+    src: "/gallery/brandywineFalls.jpg",
+    alt: "Brandywine Falls Provincial Park waterfall",
+    caption: "Brandywine Falls Provincial Park waterfall",
+  },
+];
+
+// PhotoGallery component
+function PhotoGallery() {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  return (
+    <section className="gallery-section">
+      <h2 className="tab-title">Photo Gallery</h2>
+      <div className="gallery-grid">
+        {galleryPhotos.map((photo, idx) => (
+          <div
+            key={idx}
+            className="gallery-thumb"
+            onClick={() => setSelected(idx)}
+            tabIndex={0}
+            aria-label={`View ${photo.caption}`}
+            role="button"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") setSelected(idx);
+            }}
+          >
+            <img src={photo.src} alt={photo.alt} />
+            <span className="gallery-caption">{photo.caption}</span>
+          </div>
+        ))}
+      </div>
+      {selected !== null && (
+        <div className="gallery-modal" onClick={() => setSelected(null)}>
+          <div
+            className="gallery-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={galleryPhotos[selected].src}
+              alt={galleryPhotos[selected].alt}
+            />
+            <span className="gallery-modal-caption">
+              {galleryPhotos[selected].caption}
+            </span>
+            <button
+              className="gallery-modal-close"
+              onClick={() => setSelected(null)}
+              aria-label="Close gallery"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [showLanding, setShowLanding] = useState(true);
@@ -284,7 +364,10 @@ function App() {
               </ul>
             </nav>
           </div>
-          <main className="main-content">{tabs[activeTab].content}</main>
+          <main className="main-content">
+            {tabs[activeTab].content}
+            {activeTab === 0 && <PhotoGallery />}
+          </main>
           <footer
             style={{
               marginTop: "auto",
