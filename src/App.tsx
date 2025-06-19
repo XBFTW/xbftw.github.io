@@ -97,7 +97,6 @@ const tabs = [
               </ul>
             </div>
           </div>
-          {/* Entire Skills Tab moved here */}
           <div className="skills-list resume-skills-below">
             <div className="skill-group">
               <h4 className="skill-title">Languages</h4>
@@ -128,6 +127,7 @@ const tabs = [
             </div>
           </div>
         </div>
+        <PhotoGallery />
       </section>
     ),
   },
@@ -366,7 +366,7 @@ function App() {
           </div>
           <main className="main-content">
             {tabs[activeTab].content}
-            <PhotoGallery />
+            {activeTab === 0 && <PhotoGallery />}
           </main>
           <footer
             style={{
