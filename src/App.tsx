@@ -23,7 +23,7 @@ const tabs = [
             </span>
           </h2>
           <p className="about-summary">
-            Computer Science student at{" "}
+            I am a Canadian Computer Science student at{" "}
             <span className="about-highlight">Simon Fraser University</span>{" "}
             with a passion for{" "}
             <span className="about-highlight">software development</span> and{" "}
