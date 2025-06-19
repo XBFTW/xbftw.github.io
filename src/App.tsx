@@ -127,7 +127,6 @@ const tabs = [
             </div>
           </div>
         </div>
-        <PhotoGallery />
       </section>
     ),
   },
