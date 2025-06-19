@@ -10,7 +10,7 @@ const tabs = [
         <div className="about-photo-container">
           <img
             src="/headshot.jpg"
-            alt="Uttam Sharma headshot"
+            alt="Image of Uttam Sharma"
             className="about-photo"
           />
         </div>
@@ -36,7 +36,7 @@ const tabs = [
             accessible for everyone.
           </p>
         </div>
-        {/* Passions Section - insert here, before resume */}
+        {/* Passions Section, before resume */}
         <div className="passion-box">
           <h4 className="passion-title">What I'm Passionate About</h4>
           <p className="passion-desc">
@@ -262,7 +262,11 @@ function App() {
       ) : (
         <>
           <div className="topbar">
-            <div className="site-title-gradient">
+            <div
+              className="site-title-gradient"
+              style={{ cursor: "pointer" }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <span className="site-title-text">Uttam Sharma</span>
             </div>
             <nav style={{ marginLeft: "auto" }}>
