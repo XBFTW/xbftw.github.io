@@ -353,17 +353,17 @@ footer {
 }
 
 .contact-icons {
-  display: flex;
-  gap: 1.5rem;
+  display: flex; /* Arrange icons in a row */
+  gap: 1.5rem; /* Space between icons */
   margin-top: 1.2rem;
-  justify-content: center;
+  justify-content: center; /* Center icons horizontally */
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow icons to wrap on small screens */
   width: 100%;
-  background: rgba(100, 108, 255, 0.07);
-  border-radius: 12px;
-  box-shadow: 0 2px 12px #646cff11;
-  padding: 1.2rem 0;
+  background: rgba(100, 108, 255, 0.07); /* Card-like background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 12px #646cff11; /* Subtle shadow */
+  padding: 1.2rem 0; /* Vertical padding */
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -725,5 +725,9 @@ body {
   .contact-desc,
   .contact-icons {
     padding: 1rem 0.3rem;
+  }
+  .contact-icons {
+    padding: 0.7rem 0.2rem;
+    gap: 1rem;
   }
 }

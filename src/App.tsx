@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import contactLinks from "./contactLinks";
 
+// Array of tab objects for navigation
 const tabs = [
   {
     label: "About",
@@ -179,55 +180,70 @@ const tabs = [
         <p className="contact-desc">
           Feel free to reach out to me through any of the platforms below!
         </p>
-        <div className="contact-icons contact-icons-centered">
+        {/* Contact icon box styled to match other card sections */}
+        <div className="contact-icons">
+          {/* GitHub icon link */}
           <a
             href={contactLinks.github}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="GitHub"
+            title="GitHub"
           >
             {/* GitHub SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 2.92-.39c.99 0 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z" />
             </svg>
           </a>
+          {/* LinkedIn icon link */}
           <a
             href={contactLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="LinkedIn"
+            title="LinkedIn"
           >
             {/* LinkedIn SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" />
             </svg>
           </a>
-          <a href={contactLinks.email} className="icon-link" aria-label="Email">
+          {/* Email icon link */}
+          <a
+            href={contactLinks.email}
+            className="icon-link"
+            aria-label="Email"
+            title="Email"
+          >
             {/* Email SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z" />
             </svg>
           </a>
+          {/* Discord icon link */}
           <a
             href={contactLinks.discord}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="Discord"
+            title="Discord"
           >
             {/* Discord SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.07.07 0 0 0-.073.035c-.211.375-.444.864-.608 1.249a18.524 18.524 0 0 0-5.487 0 12.51 12.51 0 0 0-.617-1.249.067.067 0 0 0-.073-.035A19.736 19.736 0 0 0 3.677 4.369a.064.064 0 0 0-.03.027C.533 9.09-.32 13.579.099 18.021a.08.08 0 0 0 .028.056c2.052 1.507 4.042 2.422 5.993 3.029a.077.077 0 0 0 .084-.027c.461-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.104c-.652-.247-1.27-.549-1.872-.892a.077.077 0 0 1-.008-.127c.126-.094.252-.192.371-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.245.198.372.292a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.891.076.076 0 0 0-.04.105c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028c1.961-.607 3.951-1.522 6.003-3.029a.077.077 0 0 0 .028-.055c.5-5.177-.838-9.637-3.548-13.625a.061.061 0 0 0-.03-.028zM8.02 15.331c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.174 1.094 2.156 2.418 0 1.334-.955 2.419-2.156 2.419zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.418 2.156-2.418 1.21 0 2.174 1.094 2.156 2.418 0 1.334-.946 2.419-2.156 2.419z" />
             </svg>
           </a>
+          {/* Instagram icon link */}
           <a
             href={contactLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="Instagram"
+            title="Instagram"
           >
             {/* Instagram SVG */}
             <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
@@ -240,59 +256,94 @@ const tabs = [
   },
 ];
 
-const galleryPhotos = [
+// Photo gallery sections and images
+type GalleryPhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+  className?: string;
+};
+
+const gallerySections: {
+  title: string;
+  photos: GalleryPhoto[];
+}[] = [
   {
-    src: "/gallery/porteauCove.jpg",
-    alt: "Uttam at Porteau Cove Provincial Park",
-    caption: "Uttam at Porteau Cove Provincial Park",
+    title: "Nature",
+    photos: [
+      {
+        src: "/gallery/porteauCove.jpg",
+        alt: "Uttam at Porteau Cove Provincial Park",
+        caption: "Uttam at Porteau Cove Provincial Park",
+      },
+      {
+        src: "/gallery/shannonFalls.jpg",
+        alt: "Shannon Falls Provincial Park waterfall",
+        caption: "Shannon Falls Provincial Park waterfall",
+      },
+      {
+        src: "/gallery/cascadeFalls.jpg",
+        alt: "Cascade Falls Waterfall",
+        caption: "Cascade Falls Waterfall",
+      },
+      {
+        src: "/gallery/brandywineFalls.jpg",
+        alt: "Brandywine Falls Provincial Park waterfall",
+        caption: "Brandywine Falls Provincial Park waterfall",
+      },
+    ],
   },
   {
-    src: "/gallery/sfuco.jpg",
-    alt: "Uttam standing with SFU Concert Orchestra team",
-    caption: "Uttam playing with SFU Concert Orchestra",
-  },
-  {
-    src: "/gallery/shannonFalls.jpg",
-    alt: "Shannon Falls Provincial Park waterfall",
-    caption: "Shannon Falls Provincial Park waterfall",
-  },
-  {
-    src: "/gallery/cascadeFalls.jpg",
-    alt: "Cascade Falls Waterfall",
-    caption: "Cascade Falls Waterfall",
-  },
-  {
-    src: "/gallery/brandywineFalls.jpg",
-    alt: "Brandywine Falls Provincial Park waterfall",
-    caption: "Brandywine Falls Provincial Park waterfall",
+    title: "Events",
+    photos: [
+      {
+        src: "/gallery/sfuco.jpg",
+        alt: "Uttam standing with SFU Concert Orchestra team",
+        caption: "Uttam playing with SFU Concert Orchestra",
+        className: "tall-photo",
+      },
+    ],
   },
 ];
 
-// PhotoGallery component
+// PhotoGallery component: displays a gallery of photos organized by section
 function PhotoGallery() {
-  const [selected, setSelected] = useState<number | null>(null);
+  // State to track which photo is selected for modal view
+  const [selected, setSelected] = useState<{
+    section: number;
+    idx: number;
+  } | null>(null);
 
   return (
     <section className="gallery-section">
       <h2 className="tab-title">Photo Gallery</h2>
-      <div className="gallery-grid">
-        {galleryPhotos.map((photo, idx) => (
-          <div
-            key={idx}
-            className="gallery-thumb"
-            onClick={() => setSelected(idx)}
-            tabIndex={0}
-            aria-label={`View ${photo.caption}`}
-            role="button"
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") setSelected(idx);
-            }}
-          >
-            <img src={photo.src} alt={photo.alt} />
-            <span className="gallery-caption">{photo.caption}</span>
+      {/* Render each gallery section with its photos */}
+      {gallerySections.map((section, sIdx) => (
+        <div key={section.title} className="gallery-group">
+          <h3 className="gallery-group-title">{section.title}</h3>
+          <div className="gallery-grid">
+            {section.photos.map((photo, idx) => (
+              <div
+                key={idx}
+                className={`gallery-thumb${photo.className ? " " + photo.className : ""}`}
+                onClick={() => setSelected({ section: sIdx, idx })}
+                tabIndex={0}
+                aria-label={`View ${photo.caption}`}
+                role="button"
+                // Allow keyboard navigation for accessibility
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ")
+                    setSelected({ section: sIdx, idx });
+                }}
+              >
+                <img src={photo.src} alt={photo.alt} />
+                <span className="gallery-caption">{photo.caption}</span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+      {/* Modal for viewing selected photo in large */}
       {selected !== null && (
         <div className="gallery-modal" onClick={() => setSelected(null)}>
           <div
@@ -300,12 +351,13 @@ function PhotoGallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={galleryPhotos[selected].src}
-              alt={galleryPhotos[selected].alt}
+              src={gallerySections[selected.section].photos[selected.idx].src}
+              alt={gallerySections[selected.section].photos[selected.idx].alt}
             />
             <span className="gallery-modal-caption">
-              {galleryPhotos[selected].caption}
+              {gallerySections[selected.section].photos[selected.idx].caption}
             </span>
+            {/* Close button for modal */}
             <button
               className="gallery-modal-close"
               onClick={() => setSelected(null)}
@@ -320,9 +372,16 @@ function PhotoGallery() {
   );
 }
 
+// Main App component
 function App() {
+  // State to track which tab is currently active
   const [activeTab, setActiveTab] = useState(0);
   const [showLanding, setShowLanding] = useState(true);
+
+  // Handler for clicking the site title (scrolls to top)
+  const handleTitleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div
@@ -344,7 +403,7 @@ function App() {
             <div
               className="site-title-gradient"
               style={{ cursor: "pointer" }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={handleTitleClick}
             >
               <span className="site-title-text">Uttam Sharma</span>
             </div>
@@ -364,8 +423,143 @@ function App() {
             </nav>
           </div>
           <main className="main-content">
-            {tabs[activeTab].content}
-            {activeTab === 0 && <PhotoGallery />}
+            {/* Render the content for the active tab */}
+            {activeTab === 0 ? (
+              // About tab: includes about, passion, resume, skills, and photo gallery
+              <section className="about-section">
+                <div className="about-photo-container">
+                  <img
+                    src="/headshot.jpg"
+                    alt="Image of Uttam Sharma"
+                    className="about-photo"
+                  />
+                </div>
+                <div className="about-text">
+                  <h2>
+                    <span className="about-hi">Hello! 👋</span>
+                    <br />
+                    <span className="about-name">
+                      I'm{" "}
+                      <span className="about-name-gradient">Uttam Sharma</span>
+                    </span>
+                  </h2>
+                  <p className="about-summary">
+                    I am a Canadian Computer Science student at{" "}
+                    <span className="about-highlight">
+                      Simon Fraser University
+                    </span>{" "}
+                    with a passion for{" "}
+                    <span className="about-highlight">
+                      software development
+                    </span>{" "}
+                    and <span className="about-highlight">cybersecurity</span>.
+                  </p>
+                  <p className="about-detail">
+                    I love exploring new tools, diving into open-source code,
+                    and staying up-to-date with the latest in tech. My goal is
+                    to create meaningful software and help make technology more
+                    secure and accessible for everyone.
+                  </p>
+                </div>
+                {/* Passions Section, before resume */}
+                <div className="passion-box">
+                  <h4 className="passion-title">What I'm Passionate About</h4>
+                  <p className="passion-desc">
+                    Outside of school, work, and coding I love playing video
+                    games, exploring nature, and spending time with friends. I
+                    also enjoy listening to music, everything from Jazz to
+                    Hip-Hop, and playing the clarinet.
+                  </p>
+                </div>
+                {/* Resume Box follows */}
+                <div className="resume-box">
+                  <div className="resume-header">
+                    <span className="resume-title">Résumé</span>
+                    <a
+                      href="/resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="resume-download"
+                    >
+                      Download PDF
+                    </a>
+                  </div>
+                  <div className="resume-content">
+                    <div className="resume-section">
+                      <h4>Education</h4>
+                      <ul>
+                        <li>
+                          <strong>Simon Fraser University</strong>
+                          <br />
+                          BSc. in Computer Science
+                          <br />
+                          2023 – Present
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="resume-section">
+                      <h4>Experience</h4>
+                      <ul>
+                        <li>
+                          <strong>Staples Canada</strong>
+                          <br />
+                          Technology Sales
+                          <br />
+                          Dec 2022 – Present
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="resume-section">
+                      <h4>Certifications &amp; Awards</h4>
+                      <ul>
+                        <li>
+                          <strong>
+                            Diplôme d’Études en Langue Française (DELF)
+                          </strong>
+                          <br />
+                          Awarded by the French Ministry of Education
+                          <br />
+                          2023
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="skills-list resume-skills-below">
+                    <div className="skill-group">
+                      <h4 className="skill-title">Languages</h4>
+                      <ul>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C / C++</li>
+                      </ul>
+                    </div>
+                    <div className="skill-group">
+                      <h4 className="skill-title">Frameworks & Libraries</h4>
+                      <ul>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>discord.js</li>
+                      </ul>
+                    </div>
+                    <div className="skill-group">
+                      <h4 className="skill-title">Tools & Other</h4>
+                      <ul>
+                        <li>Git & GitHub</li>
+                        <li>Linux</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <PhotoGallery />
+              </section>
+            ) : (
+              // Other tabs: render their content
+              tabs[activeTab].content
+            )}
           </main>
           <footer
             style={{
