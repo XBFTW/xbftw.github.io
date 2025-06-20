@@ -68,7 +68,7 @@ You can run any script with `npm run <script>`.
 ## License
 
 This website and its source code are licensed under the [MIT License](LICENSE).
-If you use this website template, please link back to this repository and my website.
+If you use this website template, please link back to this repository and my website. I chose the MIT License because I am a big supporter and user of open source software. The MIT License is simple, permissive, and encourages sharing, collaboration, and learning within the developer community. By using this license, I want to give others the same freedom to use, modify, and build upon my work as I have enjoyed with open source projects.
 
 ---
 © 2025 Uttam Sharma
