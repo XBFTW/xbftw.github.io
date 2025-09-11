@@ -144,7 +144,7 @@ const tabs = [
               and fully responsive. It serves as my portfolio and contact hub.
             </p>
             <a
-              href="https://github.com/xbftw/xbftw.github.io"
+              href="https://github.com/uttxms/uttxms.github.io"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -160,7 +160,7 @@ const tabs = [
               communities.
             </p>
             <a
-              href="https://github.com/xbftw/XBFTW-BOT"
+              href="https://github.com/uttxms/XBFTW-BOT"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
