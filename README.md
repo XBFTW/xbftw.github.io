@@ -1,4 +1,4 @@
-# xbftw.github.io
+# uttxms.github.io
 
 This is the personal portfolio website for Uttam Sharma, a Canadian Computer Science student at Simon Fraser University.  
 The site showcases my bio, résumé, projects, skills, passions, photo gallery, and contact information.
@@ -25,8 +25,8 @@ To run or build this website locally:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/xbftw/xbftw.github.io.git
-   cd xbftw.github.io
+   git clone https://github.com/uttxms/uttxms.github.io.git
+   cd uttxms.github.io
    ```
 
 2. **Install dependencies:**
